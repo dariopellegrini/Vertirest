@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="vertirest:test" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="com.dariopellegrini" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.8" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../build/classes/kotlin/test" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="vertirest" />
+          <option name="jvmTarget" value="1.8" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.2" />
+          <option name="apiVersion" value="1.2" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output-test url="file://$MODULE_DIR$/../../out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/kotlin" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/resources" type="java-test-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="vertirest_main" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.vertx:vertx-web-client:3.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.vertx:vertx-unit:3.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.vertx:vertx-web:3.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.vertx:vertx-mongo-client:3.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.vertx:vertx-web-common:3.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.vertx:vertx-auth-common:3.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.vertx:vertx-core:3.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-codec-http2:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-handler:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-handler-proxy:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-resolver-dns:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-codec-http:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-codec-socks:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-codec-dns:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-codec:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-transport:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-buffer:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-resolver:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-common:4.1.15.Final" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.vertx:vertx-bridge-common:3.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.mongodb:mongodb-driver-async:3.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.mongodb:mongodb-driver-core:3.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.mongodb:bson:3.4.1" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="vertirest_main" />
+</module>
