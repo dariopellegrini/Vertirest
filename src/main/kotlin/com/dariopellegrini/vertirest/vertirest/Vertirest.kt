@@ -1,6 +1,7 @@
 package com.dariopellegrini.vertirest.vertirest
 
 import com.dariopellegrini.vertirest.vertirest.completion.RoutesCompletion
+import com.dariopellegrini.vertirest.vertirest.constants.CollectionsNames
 import com.dariopellegrini.vertirest.vertirest.permission.PermissionsDescriptor
 import com.dariopellegrini.vertirest.vertirest.social.FacebookConfiguration
 import com.dariopellegrini.vertirest.vertirest.user.UserConfigurator
@@ -54,8 +55,8 @@ class Vertirest(val vertx: Vertx, mongoConnection: String) {
         configurator.configureIndices()
     }
 
-    fun <T: VertirestUser>configureUser(entityClass: Class<T>, facebookConfiguration: FacebookConfiguration? = null) {
-        val configurator = UserConfigurator(mongo, entityClass, facebookConfiguration)
+    fun <T: VertirestUser>configureUser(entityClass: Class<T>, facebookConfiguration: FacebookConfiguration? = null, collectionName: String? = null) {
+        val configurator = UserConfigurator(mongo, entityClass, facebookConfiguration, collectionName ?: CollectionsNames.USER_COLLECTION)
         configurator.configureUser(router)
     }
 }

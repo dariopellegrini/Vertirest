@@ -16,7 +16,7 @@ import io.vertx.ext.web.handler.BodyHandler
 class UserConfigurator<T: VertirestUser>(private val mongo: MongoClient,
                           private val entityClass: Class<T>,
                           private val facebookConfiguration: FacebookConfiguration? = null,
-                          private val collectionName: String = CollectionsNames.USER_COLLECTION) {
+                          private val collectionName: String) {
 
     fun configureUser(router: Router) {
         // Register
@@ -57,10 +57,10 @@ class UserConfigurator<T: VertirestUser>(private val mongo: MongoClient,
                     routingContext.response()
                             .setStatusCode(400)
                             .putHeader("content-type", "application/json; charset=utf-8")
-                            .end("{\"error\":\"Cannot register. Provide valid email and password\"}")
+                            .end("{\"error\":\"Cannot register. Provide valid username and password\"}")
                 } else {
-                    val email = user.email
-                    findUser(JsonObject().put("email", email), completion = {
+                    val email = user.username
+                    findUser(JsonObject().put("username", email), completion = {
                         resJson ->
                         if (resJson == null) {
                             val password = HashUtils.sha512(user.password)
@@ -83,7 +83,7 @@ class UserConfigurator<T: VertirestUser>(private val mongo: MongoClient,
                             routingContext.response()
                                     .setStatusCode(400)
                                     .putHeader("content-type", "application/json; charset=utf-8")
-                                    .end("{\"error\":\"This email already exists\"}")
+                                    .end("{\"error\":\"This username already exists\"}")
                         }
                     }, errorHandler = {
                         errorString ->
@@ -341,10 +341,10 @@ class UserConfigurator<T: VertirestUser>(private val mongo: MongoClient,
     // Extension
     private val JsonObject.loginError: String?
     get() {
-        return if (this.getString("email") == null && this.getString("password") == null) {
-            "Missing email and password"
-        } else if (this.getString("email") == null) {
-            "Missing email"
+        return if (this.getString("username") == null && this.getString("password") == null) {
+            "Missing username and password"
+        } else if (this.getString("username") == null) {
+            "Missing username"
         } else if (this.getString("password") == null) {
             "Missing password"
         } else {

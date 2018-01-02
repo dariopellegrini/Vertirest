@@ -15,7 +15,7 @@ class StartVerticle : AbstractVerticle() {
 
         vertirest.configureRoutes("people", SamplePerson::class.java)
         vertirest.configureRoutes("weapons", SampleWeapon::class.java, permissions = SamplePermissions(), routesCompletion = routeCompletion)
-        vertirest.configureUser(SampleUser::class.java, FacebookConfiguration("XXXXXXXXX", "XXXXXXXXXXXXX"))
+        vertirest.configureUser(SampleUser::class.java, FacebookConfiguration(appID = "<ID>", appSecret = "<token>"))
 
         val port = System.getenv("PORT") ?: "5050"
         vertirest.startHttpServer(port.toInt(), "0.0.0.0")

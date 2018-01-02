@@ -73,7 +73,7 @@ class FacebookManager<T: VertirestUser>(private val facebookConfiguration: Faceb
                     routingContext.response()
                             .setStatusCode(400)
                             .putHeader("content-type", "application/json; charset=utf-8")
-                            .end("{\"error\":\"Cannot register. Provide valid email\"}")
+                            .end("{\"error\":\"Cannot register. Provide valid username\"}")
                 }
             } catch(e: DecodeException) {
                 routingContext.response()
@@ -179,7 +179,7 @@ class FacebookManager<T: VertirestUser>(private val facebookConfiguration: Faceb
                     routingContext.response()
                             .setStatusCode(400)
                             .putHeader("content-type", "application/json; charset=utf-8")
-                            .end(error)
+                            .end("{\"error\":\"Facebook error. Token or user ID not verified.\"}")
                 }
 
             }

@@ -3,7 +3,7 @@ package com.dariopellegrini.vertirest.vertirest.user
 open class VertirestUser {
     val _id: String = ""
 
-    val email: String = ""
+    val username: String = ""
 
     val password: String = ""
 
@@ -12,7 +12,7 @@ open class VertirestUser {
     val facebookID: String? = null
 
     private val missingUsername: Boolean
-        get() = email.isEmpty()
+        get() = username.isEmpty()
 
     private val missingPassword: Boolean
         get() = password.isEmpty()
