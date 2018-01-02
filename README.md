@@ -1,7 +1,7 @@
 # Vertirest
 Vert.x costumizable RESTful backend written in Kotlin.
 
-Vertirest lets you to create a complete backand with REST operations, login, sign up, Facebook login and permissions with few lines of code.
+Vertirest lets you to create a complete backend with REST operations, login, sign up, Facebook login and permissions with few lines of code.
 
 ## Initialization
 In order to configure the backend a Vertirest object must be instantiated:
