@@ -1,2 +1,2 @@
 # Vertirest
-Vert.x RESTful backend written in Kotlin.
+Vert.x costumizable RESTful backend written in Kotlin.
