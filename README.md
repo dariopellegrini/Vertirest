@@ -34,7 +34,7 @@ vertirest.startHttpServer(port.toInt(), "0.0.0.0")
 ```
 
 ## Executing RESTful operations
-Nothing else. Once the server is on the following routes will be available:
+Nothing else. Once the server is on, the following routes will be available:
 - GET localhost:5050/people gives the list of all person documents.
 - GET localhost:5050/people/:id gives a single person object.
 - POST localhost:5050/people perform the creation of a new person.
